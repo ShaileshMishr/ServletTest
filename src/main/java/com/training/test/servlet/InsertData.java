@@ -54,8 +54,26 @@ public class InsertData extends HttpServlet {
 	  
 	           
 	            PrintWriter out = response.getWriter();
-	            out.println("<html><body><b>Successfully Inserted Product"
+	            out.println("<html>");
+	            out.println("<head>");
+	            out.println("<style>");  
+		           
+	            out.println("h1 {");       
+	            out.println("color:blue;");
+	           
+	            out.println("}");  
+	            out.println("* {");       
+	            out.println("background-color:#f1f1f1;");
+	           
+	            out.println("}");  
+	           
+	            out.println("</style>");  
+	            
+	            out.println("<html><body><b><h1>Successfully Inserted Product</h1>"
+	            		
 	                        + "</b></body></html>");
+	            
+//	            out.print("<br><a href='FridayServletTest/welcomeServlet'>Add Product</a><br><br>");
 	        }
 	        catch (Exception e) {
 	            e.printStackTrace();

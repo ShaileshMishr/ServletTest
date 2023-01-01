@@ -6,14 +6,53 @@
 </head>
 <body>
 <h1>Delete Product</h1>
+<div class="container">
 <form action="/FridayServletTest/DeleteData" method="post">
-        <p>Prod ID:</p> 
+<fieldset><br>
+        <p>Enter Prod ID which you want to Delete :</p> 
         
         <input type="text" name="id"/>
         <br/>
         <br/>
         <input type="submit"/>
+   
+    </fieldset>
     </form>
+    </div>
 
 </body>
 </html>
+
+<style>
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+    .container {
+    background-color: #f1f1f1;
+    padding: 50px ;
+    margin: 100px
+  }
+   h1{
+    text-align: center;
+    
+    text-shadow: 2px 2px 5px red;
+  }
+  form{
+  text-align:center;
+  }
+  
+  fieldset{
+  	width:50%;
+  	align-left:100px;
+  	margin:auto;
+    display: inline-block;
+    text-align:center;
+  }
+  
+  *{
+  background-color:  #f1f1f1;
+  }
+  
+</style>

@@ -49,9 +49,31 @@ public class DeleteData extends HttpServlet {
 	  
 	           
 	            PrintWriter out = response.getWriter();
-	            out.println("<html><body><b>Successfully Deleted Product"
+	           
+	            out.println("<html>");
+	            out.println("<head>");
+	            out.println("<style>");  
+		           
+	            out.println("h1 {");       
+	            out.println("color:blue;");
+	           
+	            out.println("}");  
+	            out.println("* {");       
+	            out.println("background-color:#f1f1f1;");
+	           
+	            out.println("}");  
+	           
+	            out.println("</style>");  
+	            
+	            out.println("<html><body><b><h1>Successfully Deleted Product</h1>"
+	            		
 	                        + "</b></body></html>");
-	        }
+	       
+	            
+	           
+	           
+	            
+ }
 	        catch (Exception e) {
 	            e.printStackTrace();
 	        }

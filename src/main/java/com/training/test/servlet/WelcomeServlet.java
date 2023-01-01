@@ -42,15 +42,49 @@ public class WelcomeServlet extends HttpServlet {
 		
 		
 		List<Product> pdrList = (List<Product>)request.getAttribute("prodList");
+		
+		  out.println("<html>");
+          out.println("<head>");
+          out.println("<style>");  
+	           
+          out.println("h1 {");       
+          out.println("color:blue;");
+         
+          out.println("}");  
+          out.println("* {");       
+          out.println("background-color:#f1f1f1;");
+         
+          out.println("}");  
+         
+          out.println(".center {"); 
+          out.println(" margin-left: auto;\r\n"
+          		+ "  margin-right: auto;"); 
+          out.println("background-color:red;");
+          out.println("}"); 
+          
+        
+          out.println(".Link1 {");       
+          out.println(" text-align: center;"
+          		+ "display:block;");
+        
+          out.println("}"); 
+          out.println("</style>");  
+          
 	
-		out.print("<h1>Welcome "+user1+"! You are successfully Enter In Product Table</h1> <br><br>");
+		out.print("<h1>Welcome "+user1+"! You are successfully Enter In Product Table</h1> <br>");
 		
 		
-		out.print("<br><a href='product.html'>Add Product</a><br><br>");
-		out.print("<br><a href='delete.html'>Delete Product</a><br><br>");
-		out.print("<br><a href='update.html'>Update Product</a><br><br>");
+		//out.print("<br><a href='product.html'>Add Product</a><br><br>");
+		//out.print("<br><a href='delete.html'>Delete Product</a><br><br>");
+		//out.print("<br><a href='update.html'>Update Product</a><br><br>");
+		out.println("<div class='Link1'>");
+		out.print("<a href='product.html' class='link'><button type=\"button\">ADD PRODUCT</button></a>");
+		out.print("<a href='delete.html' class='link'><button type=\"button\">DELETE PRODUCT</button></a>");
+		out.print("<a href='update.html'><button type=\"button\">UPDATE PRODUCT</button></a><br><br>");
+		out.println("</div>");
 
-		    out.println("<table border='1'> ");
+	
+		    out.println("<br><br><br><table border='5' class='center' > ");
 			out.println("<tr> <th>");
 			out.println("Product ID </th>");
 			out.println("<th> Product Name </th>");

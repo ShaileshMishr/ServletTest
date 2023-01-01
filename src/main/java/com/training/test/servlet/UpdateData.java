@@ -31,15 +31,24 @@ public class UpdateData extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String pid=request.getParameter("id");
+		String proname=request.getParameter("pname");
+		String price=request.getParameter("price");
+		
+		response.setContentType("text/html");
+		//PrintWriter out=response.getWriter();
+		
 		try {
 			 
 			 Connection con = DatabaseConnection.initializeDatabase();
 	  
 	             PreparedStatement st = con
-	                   .prepareStatement("delete from product where PROD_ID=?");
+	                   .prepareStatement("update product set prod_name=?,price=? where PROD_ID=?");
 	  
 	           
-	            st.setInt(1, Integer.valueOf(request.getParameter("id")));
+	            st.setString(1, proname);
+	            st.setString(2, price);
+	            st.setString(3, pid);
 	            
 	           st.executeUpdate();
 	  
@@ -49,9 +58,27 @@ public class UpdateData extends HttpServlet {
 	  
 	           
 	            PrintWriter out = response.getWriter();
-	            out.println("<html><body><b>Successfully Updated Product"
+	            
+	            out.println("<html>");
+	            out.println("<head>");
+	            out.println("<style>");  
+		           
+	            out.println("h1 {");       
+	            out.println("color:blue;");
+	           
+	            out.println("}");  
+	            out.println("* {");       
+	            out.println("background-color:#f1f1f1;");
+	           
+	            out.println("}");  
+	           
+	            out.println("</style>");  
+	            
+	            out.println("<html><body><b><h1>Successfully Update Product</h1>"
+	            		
 	                        + "</b></body></html>");
-	        }
+	       
+		}
 	        catch (Exception e) {
 	            e.printStackTrace();
 	        }

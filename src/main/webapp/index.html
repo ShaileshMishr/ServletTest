@@ -7,12 +7,49 @@
 <body>
  
 <h1>Login Page</h1>
+<div class="container">
 <form action="/FridayServletTest/welcomeServlet" method="post">
+<fieldset><br>
 <input type = "text" name="uname" placeholder ="Enter username"/><br><br>
 <input type = "password" name="pwd" placeholder ="Enter password"/><br><br>
 <input type = "submit" value = "LogIn"/><br><br>
+</fieldset>
 </form>
+</div>
 
 </body>
 </html>
 
+<style>
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+    .container {
+    background-color: #f1f1f1;
+    padding: 50px ;
+    margin: 100px
+  }
+   h1{
+    text-align: center;
+    
+    text-shadow: 2px 2px 5px red;
+  }
+  form{
+  text-align:center;
+  }
+  
+  fieldset{
+  	width:50%;
+  	align-left:100px;
+  	margin:auto;
+    display: inline-block;
+    text-align:center;
+  }
+  
+  *{
+  background-color:  #f1f1f1;
+  }
+  
+</style>

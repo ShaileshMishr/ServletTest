@@ -7,7 +7,10 @@
 <body>
 
 <h1>Add Product</h1>
+<div class="container">
+
 <form action="/FridayServletTest/InsertData" method="post">
+<fieldset><br>
         <p>Prod ID:</p> 
         
         <input type="text" name="id"/>
@@ -20,8 +23,46 @@
          <p>Price:</p> 
         <input type="text" name="pric"/><br/><br/>
         <input type="submit"/>
+        
+        </fieldset>
     </form>
+    </div>
+    
 
 
 </body>
 </html>
+
+
+<style>
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+    .container {
+    background-color: #f1f1f1;
+    padding: 50px ;
+    margin: 100px
+  }
+   h1{
+    text-align: center;
+    
+    text-shadow: 2px 2px 5px red;
+  }
+  form{
+  text-align:center;
+  }
+  
+  fieldset{
+  	width:50%;
+  	margin:auto;
+    display: inline-block;
+    text-align:center;
+  }
+  
+  *{
+  background-color:  #f1f1f1;
+  }
+  
+</style>
